@@ -6,3 +6,7 @@ gcloud builds submit --config=cloudbuild.yaml . --substitutions="_APP_VERSION=v0
 ```
 gcloud builds submit --config=jr_extra/bcl1/cloudbuild.yaml . --substitutions="_APPLY_AFTER_PLAN=No,_MANUAL_BRANCH=?" --project hybrid-test-001
 ```
+
+```
+gcloud builds submit --config=/Users/joseret/g/pso/mc1/jr-learn-terraform-provision-eks-cluster/jr_extra/helm1/cloudbuild.yaml /Users/joseret/g/pso/mc1/jr-learn-terraform-provision-eks-cluster/jr_extra/helm1 --substitutions="_APPLY_AFTER_PLAN=No,_MANUAL_BRANCH=?" --project hybrid-test-001
+```

@@ -1,0 +1,92 @@
+# Copyright 2022 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# https://github.com/GoogleCloudPlatform/solutions-terraform-cloudbuild-gitops/blob/dev/cloudbuild.yaml
+# https://cloud.google.com/architecture/managing-infrastructure-as-code
+# https://cloud.google.com/build/docs/automating-builds/create-manage-triggers
+# https://developer.atlassian.com/cloud/bitbucket/rest/api-group-pullrequests/#api-repositories-workspace-repo-slug-pullrequests-pull-request-id-comments-post
+
+timeout: 10800s
+#logsBucket: 'sds-sdg-terraform-state'
+options:
+  # logging: GCS_ONLY
+  logging: CLOUD_LOGGING_ONLY
+
+serviceAccount: 'projects/$PROJECT_ID/serviceAccounts/gsa-deployer-aws@hybrid-test-001.iam.gserviceaccount.com' # <!-- TODO: replace the value -->
+
+steps:
+
+# [START tf-init]
+
+  - id: 'tf init'
+    timeout: '10800s'
+    name: 'us-central1-docker.pkg.dev/hybrid-test-001/hybrid-test-001/utils/build-utils/anthos-build-utils:v0.2.2023-12-01' # <!-- TODO: replace the value -->
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        terraform init -no-color -get=true -upgrade=true || exit 1 
+    secretEnv: ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY'] 
+    env:
+    - 'AWS_REGION=us-east-1'              
+# [END tf-init]
+
+# [START tf-plan]
+  - id: 'tf plan'
+    timeout: '10800s'
+    name: 'us-central1-docker.pkg.dev/hybrid-test-001/hybrid-test-001/utils/build-utils/anthos-build-utils:v0.2.2023-12-01' # <!-- TODO: replace the value -->
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        terraform plan -no-color -out=./planfile || exit 1 
+    secretEnv: ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']   
+    env:
+    - 'AWS_REGION=us-east-1'           
+  # [END tf-plan]
+  
+  # [START tf-apply]
+  - id: 'tf apply'
+    timeout: '10800s'
+    name: 'us-central1-docker.pkg.dev/hybrid-test-001/hybrid-test-001/utils/build-utils/anthos-build-utils:v0.2.2023-12-01' # <!-- TODO: replace the value -->
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "*******************************EXECUTING THE TERRAFORM SCRIPT*******************************"
+        echo "APPLY3 AFTER PLAN is $_APPLY_AFTER_PLAN AND THE BRANCH IS $_MANUAL_BRANCH"
+        echo "********************************************************************************************"
+        if [[  "$_APPLY_AFTER_PLAN" == "Yes" ]]; then
+          #echo "START APPLYING THE SCRIPTS AND THE BRANCH IS $_MANUAL_BRANCH"
+          terraform apply -no-color -auto-approve ./planfile  || exit 1
+        else
+          echo "***************************** SKIPPING APPLYING ********************************************"
+          echo "THE BRANCH IS $_MANUAL_BRANCH"
+          echo "********************************************************************************************"        
+          if [[  "$_APPLY_AFTER_PLAN" == "DESTROY" ]]; then    
+            terraform destroy -auto-approve -no-color || exit 1 
+          fi          
+        fi
+    secretEnv: ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']   
+    env:
+    - 'AWS_REGION=us-east-1'        
+            
+  # [END tf-apply]
+     
+availableSecrets:
+  secretManager:
+  - versionName: projects/${PROJECT_ID}/secrets/AWS_ACCESS_KEY_ID/versions/latest
+    env: 'AWS_ACCESS_KEY_ID'
+  - versionName: projects/${PROJECT_ID}/secrets/AWS_SECRET_ACCESS_KEY/versions/latest
+    env: 'AWS_SECRET_ACCESS_KEY'        
