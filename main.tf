@@ -15,19 +15,19 @@ data "aws_availability_zones" "available" {
 }
 
 locals {
-  cluster_name = "education-eks-${random_string.suffix.result}"
+  cluster_name = local.jr_cluster_name // "education-eks-${random_string.suffix.result}"
 }
 
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
-}
+# resource "random_string" "suffix" {
+#   length  = 8
+#   special = false
+# }
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.0.0"
 
-  name = "education-vpc"
+  name = local.jr_cluster_name //"education-vpc"
 
   cidr = "10.0.0.0/16"
   azs  = slice(data.aws_availability_zones.available.names, 0, 3)
@@ -67,23 +67,34 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    one = {
-      name = "node-group-1"
+    default = {
+      name = "aws-default"
 
-      instance_types = ["t3.small"]
+      instance_types = ["m7i-flex.xlarge"]
 
       min_size     = 1
       max_size     = 3
-      desired_size = 2
+      desired_size = 1
     }
 
-    two = {
-      name = "node-group-2"
+    apigee-data = {
+      name = "apigee-data"
 
-      instance_types = ["t3.small"]
+
+      instance_types = ["m7i-flex.xlarge"]
 
       min_size     = 1
-      max_size     = 2
+      max_size     = 3
+      desired_size = 1
+    }
+
+    apigee-runtime = {
+      name = "apigee-runtime"
+
+      instance_types = ["m7i-flex.xlarge"]
+
+      min_size     = 1
+      max_size     = 3
       desired_size = 1
     }
   }
