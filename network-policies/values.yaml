@@ -1,0 +1,639 @@
+networkPolicies:
+- name: mart-to-cassandra
+  settings:
+    matchLabels:
+      app: apigee-mart
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 9042
+    - protocol: TCP
+      port: 9142
+- name: cassandra-from-mart
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-mart
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 9042
+    - protocol: TCP
+      port: 9142
+- name: connect-to-mart
+  settings:
+    matchLabels:
+      app: apigee-connect
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: mart-from-connect
+  settings:
+    matchLabels:
+      app: apigee-mart
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-connect
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: prometheus-to-mart
+  settings:
+    matchLabels:
+      app: apigee-prometheus
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: mart-from-prometheus
+  settings:
+    matchLabels:
+      app: apigee-mart
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-prometheus
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: runtime-processor-to-cassandra
+  settings:
+    matchLabels:
+      app: apigee-runtime-processor
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 9042
+    - protocol: TCP
+      port: 9142
+- name: cassandra-from-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-runtime-processor
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 9042
+    - protocol: TCP
+      port: 9142
+- name: istio-to-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-istio-ingressgateway
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: runtime-processor-from-istio
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-isito-ingressgateway
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: runtime-processor-to-fluentd
+  settings:
+    matchLabels:
+      app: apigee-runtime-processor
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 20001
+- name: fluentd-from-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-fluentd
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-runtime-processor
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 20001
+- name: prometheus-to-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-prometheus
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: runtime-processor-from-prometheus
+  settings:
+    matchLabels:
+      app: apigee-rumtime-processor
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-runtime-processor
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: envoy-with-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-envoy
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 6379
+- name: envoy-with-runtime-processor
+  settings:
+    matchLabels:
+      app: apigee-envoy
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-runtime-processor
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 6379
+- name: runtime-processor-with-envoy
+  settings:
+    matchLabels:
+      app: apigee-runtime-processor
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 6379
+- name: runtime-processor-with-envoy
+  settings:
+    matchLabels:
+      app: apigee-runtime-processor
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-envoy
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 6379
+- name: envoy-with-redis
+  settings:
+    matchLabels:
+      app: apigee-envoy
+  policyType:
+    - Egress
+    - Ingress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 6379
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-redis
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 6379
+- name: redis-with-envoy
+  settings:
+    matchLabels:
+      app: apigee-redis
+  policyType:
+    - Egress
+    - Ingress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 6379
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-envoy
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 6379
+- name: watcher-to-default-istio-ingress
+  settings:
+    matchLabels:
+      app: apigee-watcher
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: default-istio-ingress-from-watcher
+  settings:
+    matchLabels:
+      app: apigee-runtime-processor
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-watcher
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: default-istio-ingress-to-ingress-gateway-manager
+  settings:
+    matchLabels:
+      app: apigee-istio-ingressgateway
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 15012
+- name: default-gateway-manager-from-default-istio-ingress
+  settings:
+    matchLabels:
+      app: apigee-ingressgatewaymgr
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-istio-ingressgateway
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 15012
+- name: cassandra-api-services
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Egress
+    - Ingress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8778
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-cassandra
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8778
+- name: cassandra-intranode-communication
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Egress
+    - Ingress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 7001
+    - protocol: TCP
+      port: 7199
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-cassandra
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 7001
+    - protocol: TCP
+      port: 7199
+- name: prometheus-to-cassandra
+  settings:
+    matchLabels:
+      app: apigee-prometheus
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 7070
+- name: cassandra-from-prometheus
+  settings:
+    matchLabels:
+      app: apigee-cassandra
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-prometheus
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 7070
+- name: synchronizer-to-cassandra
+  settings:
+    matchLabels:
+      app: apigee-synchronizer
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 9042
+- name: cassandra-from-synchronizer
+  settings:
+    matchLabels:
+      app: apigee-synchronizer
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-cassandra
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 9042
+- name: prometheus-to-synchronizer
+  settings:
+    matchLabels:
+      app: apigee-prometheus
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 8443
+- name: synchronizer-from-prometheus
+  settings:
+    matchLabels:
+      app: apigee-synchronizer
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-prometheus
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443
+- name: prometheus-to-udca
+  settings:
+    matchLabels:
+      app: apigee-prometheus
+  policyType:
+    - Egress
+  egress:
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  egressPorts:
+    - protocol: TCP
+      port: 7070
+- name: udca-from-prometheus
+  settings:
+    matchLabels:
+      app: apigee-ingressgatewaymgr
+  policyType:
+    - Ingress
+  ingress:
+    - name: namespaceSelector
+      settings:
+        matchLabels:
+          app: citi-apigee-namespace 
+    - name: podSelector
+      settings:
+        matchLabels:
+          app: apigee-prometheus
+    - name: ipBlock
+      settings:
+        cidr: "10.0.0.0/24"
+  ingressPorts:
+    - protocol: TCP
+      port: 8443

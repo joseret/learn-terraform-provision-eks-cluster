@@ -1,0 +1,108 @@
+{{- if .Values.networkPolicies -}}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-all
+  namespace: {{ $.Release.Namespace }}
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  - Egress
+{{- range .Values.networkPolicies }}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ .name }}
+  namespace: {{ $.Release.Namespace }}
+spec:
+  podSelector:
+  {{- range $k, $v := .settings }}
+    matchLabels:
+      {{- range $k, $v := . }}
+      {{ $k }}: {{ $v }}
+      {{- end -}}
+  {{- end }}
+  policyTypes:
+  {{- range $i, $type := .policyType }}
+  - {{ $type }}
+  {{- end }}
+  {{- if .ingress }}
+  ingress:
+  - from:
+  {{- range $i, $ingress := .ingress }}
+    - {{ .name -}}: {{- if eq .name "ipBlock" }}  
+    {{- range $k, $v := .settings }}
+        cidr: {{ $v -}}
+        {{ end -}}
+    {{ end -}}
+    {{- if eq .name "namespaceSelector" }}
+    {{- range $k, $v := .settings }}
+        matchLabels:
+        {{- range $k, $v := . }}
+          {{ $k }}: {{ $v }}
+        {{- end -}}
+    {{ end -}}
+    {{- end }}
+    {{- if eq .name "podSelector" }}
+    {{- range $k, $v := .settings }}
+        matchLabels:
+        {{- range $k, $v := . }}
+          {{ $k }}: {{ $v }}
+        {{- end -}}
+    {{ end -}}
+    {{- end }}
+    {{- end }}
+    ports:
+    {{ range $i, $port := .ingressPorts }}
+    {{- range $k, $v := . -}}
+    {{- if eq $k "port" -}}
+    - {{ $k }}: {{ $v }}
+    {{- end -}}
+    {{ if eq $k "protocol" }}
+      {{ $k }}: {{ $v }}
+    {{ end -}}
+    {{ end -}}
+    {{- end }}
+  {{- end }}
+  {{- if .egress }}
+  egress:
+  - to:
+  {{- range $i, $egress := .egress }}
+    - {{ .name -}}: {{- if eq .name "ipBlock" }}  
+    {{- range $k, $v := .settings }}
+        cidr: {{ $v -}}
+        {{ end -}}
+    {{ end -}}
+    {{- if eq .name "namespaceSelector" }}
+    {{- range $k, $v := .settings }}
+        matchLabels:
+        {{- range $k, $v := . }}
+          {{ $k }}: {{ $v }}
+        {{- end -}}
+    {{ end -}}
+    {{- end }}
+    {{- if eq .name "podSelector" }}
+    {{- range $k, $v := .settings }}
+        matchLabels:
+        {{- range $k, $v := . }}
+          {{ $k }}: {{ $v }}
+        {{- end -}}
+    {{ end -}}
+    {{- end }}
+    {{- end }}
+    ports:
+    {{ range $i, $port := .egressPorts }}
+    {{- range $k, $v := . -}}
+    {{- if eq $k "port" -}}
+    - {{ $k }}: {{ $v }}
+    {{- end -}}
+    {{ if eq $k "protocol" }}
+      {{ $k }}: {{ $v }}
+    {{ end -}}
+    {{ end -}}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- end }}
