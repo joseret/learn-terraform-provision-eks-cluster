@@ -13,4 +13,5 @@ gcloud builds submit --config=/Users/joseret/g/pso/mc1/jr-learn-terraform-provis
 
 ```
 export KUBECONFIG=$HOME/aws1
+aws eks update-kubeconfig --region us-east1 --name cbnk-aws-v1
 ```
