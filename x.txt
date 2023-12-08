@@ -1,0 +1,1415 @@
+data.aws_iam_policy.ebs_csi_policy: Reading...
+module.eks.module.kms.data.aws_caller_identity.current: Reading...
+module.irsa-ebs-csi.data.aws_partition.current: Reading...
+module.eks.data.aws_partition.current: Reading...
+module.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/cbnk-aws-v1/cluster]
+module.irsa-ebs-csi.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.kms.data.aws_partition.current: Reading...
+module.eks.module.kms.data.aws_partition.current: Read complete after 0s [id=aws]
+module.irsa-ebs-csi.data.aws_caller_identity.current: Reading...
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_caller_identity.current: Reading...
+module.eks.data.aws_caller_identity.current: Reading...
+data.aws_availability_zones.available: Reading...
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_caller_identity.current: Reading...
+module.eks.module.self_managed_node_group["default"].data.aws_caller_identity.current: Reading...
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-090a7f624fac790db]
+module.eks.module.self_managed_node_group["default"].data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.module.self_managed_node_group["default"].data.aws_partition.current: Reading...
+module.eks.module.self_managed_node_group["default"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_partition.current: Reading...
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_partition.current: Reading...
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.self_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.module.self_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296]
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296]
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.irsa-ebs-csi.data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role.this[0]: Refreshing state... [id=apigee-data-eks-node-group-20231129234615297400000002]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role.this[0]: Refreshing state... [id=apigee-runtime-eks-node-group-20231129234615297600000003]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role.this[0]: Refreshing state... [id=default-eks-node-group-20231201214223356500000001]
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2764486067]
+module.eks.data.aws_iam_session_context.current: Reading...
+module.eks.data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::660387449292:root]
+module.eks.module.kms.data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_caller_identity.current: Read complete after 1s [id=660387449292]
+module.eks.aws_iam_role.this[0]: Refreshing state... [id=cbnk-aws-v1-cluster-20231129234615298800000004]
+data.aws_availability_zones.available: Read complete after 1s [id=us-east-1]
+data.aws_iam_policy.ebs_csi_policy: Read complete after 1s [id=arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=cbnk-aws-v1-cluster-20231129234615298800000004-20231129234616851300000011]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=cbnk-aws-v1-cluster-20231129234615298800000004-20231129234616834700000010]
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=4240614147]
+module.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=96c0b2b1-074b-440e-9190-4404d369101a]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=default-eks-node-group-20231201214223356500000001-20231201214224607700000004]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=apigee-data-eks-node-group-20231129234615297400000002-2023112923461642420000000c]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=apigee-data-eks-node-group-20231129234615297400000002-2023112923461637180000000b]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=apigee-data-eks-node-group-20231129234615297400000002-2023112923461635540000000a]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616118000000005]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616144000000006]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=default-eks-node-group-20231201214223356500000001-20231201214224360100000002]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=default-eks-node-group-20231201214223356500000001-20231201214224554200000003]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616203500000007]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-014034fdb8b3ba4b2]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-05be0a0fbb69c0185]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-05b1359c16cfd0cc5]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0b3536e241bba812a]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0b5b4937384bf71de]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0de4f6f42ebb4e663]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-09c109e429aff633d]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0ad46255c2886e70a]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-089751bc6ca566d39]
+module.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0942143ea9b95ba80]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0ec62d1568ecc7b0e]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0d75e626c289c2e80]
+module.eks.aws_security_group.node[0]: Refreshing state... [id=sg-049e6b12293b8b1d3]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0187fedbee3706e0c]
+module.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/cbnk-aws-v1]
+module.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::660387449292:policy/cbnk-aws-v1-cluster-ClusterEncryption20231129234634424500000013]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-013074b9fe4e4d1eb]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-0656e57018e316ea9]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-047cfffbb4e3ae409]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-0bcc1b2412a9e2d0c]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-03f92e287945c4280]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-018a4c0336e4bff71]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-641816599]
+module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-694816235]
+module.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-1433208929]
+module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-4189552808]
+module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-2547344791]
+module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-2401798030]
+module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-513913930]
+module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-1586954753]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-2183068664]
+module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-1305165344]
+module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-2979711922]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0913e91aa1e3ef0c7]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0ec62d1568ecc7b0e1080289494]
+module.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=cbnk-aws-v1-cluster-20231129234615298800000004-20231129234634909100000014]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-0006990a3eaf7e68c]
+module.eks.aws_eks_cluster.this[0]: Refreshing state... [id=cbnk-aws-v1]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0d75e626c289c2e801080289494]
+module.eks.time_sleep.this[0]: Refreshing state... [id=2023-11-29T23:55:49Z]
+module.eks.data.tls_certificate.this[0]: Reading...
+module.irsa-ebs-csi.data.aws_iam_policy_document.assume_role_with_oidc[0]: Reading...
+module.irsa-ebs-csi.data.aws_iam_policy_document.assume_role_with_oidc[0]: Read complete after 0s [id=1770822754]
+module.irsa-ebs-csi.aws_iam_role.this[0]: Refreshing state... [id=AmazonEKSTFEBSCSIRole-cbnk-aws-v1]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_ami.eks_default[0]: Reading...
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_ami.eks_default[0]: Reading...
+module.eks.module.self_managed_node_group["default"].data.aws_ami.eks_default[0]: Reading...
+module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0]: Refreshing state... [id=lt-045328e0150f29f00]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_launch_template.this[0]: Refreshing state... [id=lt-01319851e8a4afcb9]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_launch_template.this[0]: Refreshing state... [id=lt-0aaa86865d5252ed2]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Refreshing state... [id=cbnk-aws-v1:default-20231201214225810200000006]
+module.eks.module.eks_managed_node_group["apigee-data"].aws_eks_node_group.this[0]: Refreshing state... [id=cbnk-aws-v1:apigee-data-2023112923555022640000001d]
+module.eks.module.eks_managed_node_group["apigee-runtime"].aws_eks_node_group.this[0]: Refreshing state... [id=cbnk-aws-v1:apigee-runtime-2023112923555022870000001f]
+module.eks.module.self_managed_node_group["apigee-data"].data.aws_ami.eks_default[0]: Read complete after 0s [id=ami-0b6f89f548c40aa48]
+module.eks.module.self_managed_node_group["default"].data.aws_ami.eks_default[0]: Read complete after 0s [id=ami-0b6f89f548c40aa48]
+module.eks.module.self_managed_node_group["apigee-runtime"].data.aws_ami.eks_default[0]: Read complete after 0s [id=ami-0b6f89f548c40aa48]
+module.irsa-ebs-csi.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=AmazonEKSTFEBSCSIRole-cbnk-aws-v1-20231129235520472200000016]
+aws_eks_addon.ebs-csi: Refreshing state... [id=cbnk-aws-v1:aws-ebs-csi-driver]
+module.eks.data.tls_certificate.this[0]: Read complete after 0s [id=5933588ce34e24e9fb40c3565fb0b5993639df67]
+module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::660387449292:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/2590315CF29DB68636AA3AC75B7E2863]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_eks_node_group.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_eks_node_group" "this" {
+      - ami_type               = "AL2_x86_64" -> null
+      - arn                    = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/apigee-data-2023112923555022640000001d/54c60ec1-5255-a76c-f84a-9a6118395420" -> null
+      - capacity_type          = "ON_DEMAND" -> null
+      - cluster_name           = "cbnk-aws-v1" -> null
+      - disk_size              = 0 -> null
+      - id                     = "cbnk-aws-v1:apigee-data-2023112923555022640000001d" -> null
+      - instance_types         = [
+          - "m7i-flex.xlarge",
+        ] -> null
+      - labels                 = {} -> null
+      - node_group_name        = "apigee-data-2023112923555022640000001d" -> null
+      - node_group_name_prefix = "apigee-data-" -> null
+      - node_role_arn          = "arn:aws:iam::660387449292:role/apigee-data-eks-node-group-20231129234615297400000002" -> null
+      - release_version        = "1.24.17-20231116" -> null
+      - resources              = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-apigee-data-2023112923555022640000001d-54c60ec1-5255-a76c-f84a-9a6118395420"
+                    },
+                ]
+              - remote_access_security_group_id = ""
+            },
+        ] -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-089751bc6ca566d39",
+          - "subnet-09c109e429aff633d",
+          - "subnet-0ad46255c2886e70a",
+        ] -> null
+      - tags                   = {
+          - "Name" = "apigee-data"
+        } -> null
+      - tags_all               = {
+          - "Name" = "apigee-data"
+        } -> null
+      - version                = "1.24" -> null
+
+      - launch_template {
+          - id      = "lt-0aaa86865d5252ed2" -> null
+          - name    = "apigee-data-20231129235549544400000017" -> null
+          - version = "1" -> null
+        }
+
+      - scaling_config {
+          - desired_size = 1 -> null
+          - max_size     = 3 -> null
+          - min_size     = 1 -> null
+        }
+
+      - timeouts {}
+
+      - update_config {
+          - max_unavailable            = 0 -> null
+          - max_unavailable_percentage = 33 -> null
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::660387449292:role/apigee-data-eks-node-group-20231129234615297400000002" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                      - Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-11-29T23:46:15Z" -> null
+      - description           = "EKS managed node group IAM role" -> null
+      - force_detach_policies = true -> null
+      - id                    = "apigee-data-eks-node-group-20231129234615297400000002" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+          - "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "apigee-data-eks-node-group-20231129234615297400000002" -> null
+      - name_prefix           = "apigee-data-eks-node-group-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZTQRIZHGDGB3FFHAX" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-data-eks-node-group-20231129234615297400000002-2023112923461642420000000c" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "apigee-data-eks-node-group-20231129234615297400000002" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-data-eks-node-group-20231129234615297400000002-2023112923461635540000000a" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "apigee-data-eks-node-group-20231129234615297400000002" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-data-eks-node-group-20231129234615297400000002-2023112923461637180000000b" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "apigee-data-eks-node-group-20231129234615297400000002" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-data"].aws_launch_template.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-data"] is not in configuration)
+  - resource "aws_launch_template" "this" {
+      - arn                     = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-0aaa86865d5252ed2" -> null
+      - default_version         = 1 -> null
+      - description             = "Custom launch template for apigee-data EKS managed node group" -> null
+      - disable_api_stop        = false -> null
+      - disable_api_termination = false -> null
+      - id                      = "lt-0aaa86865d5252ed2" -> null
+      - latest_version          = 1 -> null
+      - name                    = "apigee-data-20231129235549544400000017" -> null
+      - name_prefix             = "apigee-data-" -> null
+      - security_group_names    = [] -> null
+      - tags                    = {} -> null
+      - tags_all                = {} -> null
+      - update_default_version  = true -> null
+      - vpc_security_group_ids  = [
+          - "sg-049e6b12293b8b1d3",
+        ] -> null
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+        }
+
+      - monitoring {
+          - enabled = true -> null
+        }
+
+      - tag_specifications {
+          - resource_type = "instance" -> null
+          - tags          = {
+              - "Name" = "apigee-data"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "network-interface" -> null
+          - tags          = {
+              - "Name" = "apigee-data"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "volume" -> null
+          - tags          = {
+              - "Name" = "apigee-data"
+            } -> null
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_eks_node_group.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_eks_node_group" "this" {
+      - ami_type               = "AL2_x86_64" -> null
+      - arn                    = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/apigee-runtime-2023112923555022870000001f/86c60ec1-5260-f799-8768-2dcb58762f41" -> null
+      - capacity_type          = "ON_DEMAND" -> null
+      - cluster_name           = "cbnk-aws-v1" -> null
+      - disk_size              = 0 -> null
+      - id                     = "cbnk-aws-v1:apigee-runtime-2023112923555022870000001f" -> null
+      - instance_types         = [
+          - "m7i-flex.xlarge",
+        ] -> null
+      - labels                 = {} -> null
+      - node_group_name        = "apigee-runtime-2023112923555022870000001f" -> null
+      - node_group_name_prefix = "apigee-runtime-" -> null
+      - node_role_arn          = "arn:aws:iam::660387449292:role/apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+      - release_version        = "1.24.17-20231116" -> null
+      - resources              = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-apigee-runtime-2023112923555022870000001f-86c60ec1-5260-f799-8768-2dcb58762f41"
+                    },
+                ]
+              - remote_access_security_group_id = ""
+            },
+        ] -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-089751bc6ca566d39",
+          - "subnet-09c109e429aff633d",
+          - "subnet-0ad46255c2886e70a",
+        ] -> null
+      - tags                   = {
+          - "Name" = "apigee-runtime"
+        } -> null
+      - tags_all               = {
+          - "Name" = "apigee-runtime"
+        } -> null
+      - version                = "1.24" -> null
+
+      - launch_template {
+          - id      = "lt-01319851e8a4afcb9" -> null
+          - name    = "apigee-runtime-20231129235549545400000019" -> null
+          - version = "1" -> null
+        }
+
+      - scaling_config {
+          - desired_size = 1 -> null
+          - max_size     = 3 -> null
+          - min_size     = 1 -> null
+        }
+
+      - timeouts {}
+
+      - update_config {
+          - max_unavailable            = 0 -> null
+          - max_unavailable_percentage = 33 -> null
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::660387449292:role/apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                      - Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-11-29T23:46:15Z" -> null
+      - description           = "EKS managed node group IAM role" -> null
+      - force_detach_policies = true -> null
+      - id                    = "apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+          - "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+      - name_prefix           = "apigee-runtime-eks-node-group-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZTQRIZHGIZPPQILSR" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616144000000006" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616203500000007" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "apigee-runtime-eks-node-group-20231129234615297600000003-20231129234616118000000005" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "apigee-runtime-eks-node-group-20231129234615297600000003" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["apigee-runtime"].aws_launch_template.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["apigee-runtime"] is not in configuration)
+  - resource "aws_launch_template" "this" {
+      - arn                     = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-01319851e8a4afcb9" -> null
+      - default_version         = 1 -> null
+      - description             = "Custom launch template for apigee-runtime EKS managed node group" -> null
+      - disable_api_stop        = false -> null
+      - disable_api_termination = false -> null
+      - id                      = "lt-01319851e8a4afcb9" -> null
+      - latest_version          = 1 -> null
+      - name                    = "apigee-runtime-20231129235549545400000019" -> null
+      - name_prefix             = "apigee-runtime-" -> null
+      - security_group_names    = [] -> null
+      - tags                    = {} -> null
+      - tags_all                = {} -> null
+      - update_default_version  = true -> null
+      - vpc_security_group_ids  = [
+          - "sg-049e6b12293b8b1d3",
+        ] -> null
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+        }
+
+      - monitoring {
+          - enabled = true -> null
+        }
+
+      - tag_specifications {
+          - resource_type = "instance" -> null
+          - tags          = {
+              - "Name" = "apigee-runtime"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "network-interface" -> null
+          - tags          = {
+              - "Name" = "apigee-runtime"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "volume" -> null
+          - tags          = {
+              - "Name" = "apigee-runtime"
+            } -> null
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_eks_node_group" "this" {
+      - ami_type               = "AL2_x86_64" -> null
+      - arn                    = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/default-20231201214225810200000006/e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3" -> null
+      - capacity_type          = "ON_DEMAND" -> null
+      - cluster_name           = "cbnk-aws-v1" -> null
+      - disk_size              = 0 -> null
+      - id                     = "cbnk-aws-v1:default-20231201214225810200000006" -> null
+      - instance_types         = [
+          - "m7i-flex.xlarge",
+        ] -> null
+      - labels                 = {} -> null
+      - node_group_name        = "default-20231201214225810200000006" -> null
+      - node_group_name_prefix = "default-" -> null
+      - node_role_arn          = "arn:aws:iam::660387449292:role/default-eks-node-group-20231201214223356500000001" -> null
+      - release_version        = "1.24.17-20231116" -> null
+      - resources              = [
+          - {
+              - autoscaling_groups              = [
+                  - {
+                      - name = "eks-default-20231201214225810200000006-e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3"
+                    },
+                ]
+              - remote_access_security_group_id = ""
+            },
+        ] -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-089751bc6ca566d39",
+          - "subnet-09c109e429aff633d",
+          - "subnet-0ad46255c2886e70a",
+        ] -> null
+      - tags                   = {
+          - "Name" = "default"
+        } -> null
+      - tags_all               = {
+          - "Name" = "default"
+        } -> null
+      - version                = "1.24" -> null
+
+      - launch_template {
+          - id      = "lt-045328e0150f29f00" -> null
+          - name    = "default-2023112923554954590000001b" -> null
+          - version = "2" -> null
+        }
+
+      - scaling_config {
+          - desired_size = 1 -> null
+          - max_size     = 3 -> null
+          - min_size     = 1 -> null
+        }
+
+      - timeouts {}
+
+      - update_config {
+          - max_unavailable            = 0 -> null
+          - max_unavailable_percentage = 33 -> null
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_iam_role.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::660387449292:role/default-eks-node-group-20231201214223356500000001" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                      - Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-12-01T21:42:23Z" -> null
+      - description           = "EKS managed node group IAM role" -> null
+      - force_detach_policies = true -> null
+      - id                    = "default-eks-node-group-20231201214223356500000001" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+          - "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "default-eks-node-group-20231201214223356500000001" -> null
+      - name_prefix           = "default-eks-node-group-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAZTQRIZHGFKVGGEV64" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "default-eks-node-group-20231201214223356500000001-20231201214224360100000002" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "default-eks-node-group-20231201214223356500000001" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "default-eks-node-group-20231201214223356500000001-20231201214224554200000003" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "default-eks-node-group-20231201214223356500000001" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "default-eks-node-group-20231201214223356500000001-20231201214224607700000004" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "default-eks-node-group-20231201214223356500000001" -> null
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0] will be destroyed
+  # (because module.eks.module.eks_managed_node_group["default"] is not in configuration)
+  - resource "aws_launch_template" "this" {
+      - arn                     = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-045328e0150f29f00" -> null
+      - default_version         = 2 -> null
+      - description             = "Custom launch template for default EKS managed node group" -> null
+      - disable_api_stop        = false -> null
+      - disable_api_termination = false -> null
+      - id                      = "lt-045328e0150f29f00" -> null
+      - latest_version          = 2 -> null
+      - name                    = "default-2023112923554954590000001b" -> null
+      - name_prefix             = "default-" -> null
+      - security_group_names    = [] -> null
+      - tags                    = {} -> null
+      - tags_all                = {} -> null
+      - update_default_version  = true -> null
+      - vpc_security_group_ids  = [
+          - "sg-049e6b12293b8b1d3",
+        ] -> null
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+        }
+
+      - monitoring {
+          - enabled = true -> null
+        }
+
+      - tag_specifications {
+          - resource_type = "instance" -> null
+          - tags          = {
+              - "Name" = "default"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "network-interface" -> null
+          - tags          = {
+              - "Name" = "default"
+            } -> null
+        }
+      - tag_specifications {
+          - resource_type = "volume" -> null
+          - tags          = {
+              - "Name" = "default"
+            } -> null
+        }
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_autoscaling_group.this[0] will be created
+  + resource "aws_autoscaling_group" "this" {
+      + arn                       = (known after apply)
+      + availability_zones        = (known after apply)
+      + default_cooldown          = (known after apply)
+      + desired_capacity          = 1
+      + force_delete              = false
+      + force_delete_warm_pool    = false
+      + health_check_grace_period = 300
+      + health_check_type         = (known after apply)
+      + id                        = (known after apply)
+      + load_balancers            = (known after apply)
+      + max_size                  = 3
+      + metrics_granularity       = "1Minute"
+      + min_size                  = 1
+      + name                      = (known after apply)
+      + name_prefix               = "apigee-data-"
+      + predicted_capacity        = (known after apply)
+      + protect_from_scale_in     = false
+      + service_linked_role_arn   = (known after apply)
+      + target_group_arns         = (known after apply)
+      + termination_policies      = []
+      + vpc_zone_identifier       = [
+          + "subnet-089751bc6ca566d39",
+          + "subnet-09c109e429aff633d",
+          + "subnet-0ad46255c2886e70a",
+        ]
+      + wait_for_capacity_timeout = "10m"
+      + warm_pool_size            = (known after apply)
+
+      + instance_refresh {
+          + strategy = "Rolling"
+
+          + preferences {
+              + min_healthy_percentage = 66
+              + skip_matching          = false
+            }
+        }
+
+      + launch_template {
+          + id      = (known after apply)
+          + name    = (known after apply)
+          + version = (known after apply)
+        }
+
+      + tag {
+          + key                 = "Name"
+          + propagate_at_launch = true
+          + value               = "apigee-data"
+        }
+      + tag {
+          + key                 = "k8s.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+      + tag {
+          + key                 = "kubernetes.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+
+      + timeouts {}
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_iam_instance_profile.this[0] will be created
+  + resource "aws_iam_instance_profile" "this" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "apigee-data-node-group-"
+      + path        = "/"
+      + role        = (known after apply)
+      + tags_all    = (known after apply)
+      + unique_id   = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                      + Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Self managed node group IAM role"
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "apigee-data-node-group-"
+      + path                  = "/"
+      + tags_all              = (known after apply)
+      + unique_id             = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-data"].aws_launch_template.this[0] will be created
+  + resource "aws_launch_template" "this" {
+      + arn                    = (known after apply)
+      + default_version        = (known after apply)
+      + description            = "Custom launch template for apigee-data self managed node group"
+      + id                     = (known after apply)
+      + image_id               = "ami-0b6f89f548c40aa48"
+      + instance_type          = "m6i.large"
+      + latest_version         = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "apigee-data-"
+      + tags_all               = (known after apply)
+      + update_default_version = true
+      + user_data              = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+      + vpc_security_group_ids = [
+          + "sg-049e6b12293b8b1d3",
+        ]
+
+      + iam_instance_profile {
+          + arn = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_protocol_ipv6          = (known after apply)
+          + http_put_response_hop_limit = 2
+          + http_tokens                 = "required"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + monitoring {
+          + enabled = true
+        }
+
+      + tag_specifications {
+          + resource_type = "instance"
+          + tags          = {
+              + "Name" = "apigee-data"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "network-interface"
+          + tags          = {
+              + "Name" = "apigee-data"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "volume"
+          + tags          = {
+              + "Name" = "apigee-data"
+            }
+        }
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_autoscaling_group.this[0] will be created
+  + resource "aws_autoscaling_group" "this" {
+      + arn                       = (known after apply)
+      + availability_zones        = (known after apply)
+      + default_cooldown          = (known after apply)
+      + desired_capacity          = 1
+      + force_delete              = false
+      + force_delete_warm_pool    = false
+      + health_check_grace_period = 300
+      + health_check_type         = (known after apply)
+      + id                        = (known after apply)
+      + load_balancers            = (known after apply)
+      + max_size                  = 3
+      + metrics_granularity       = "1Minute"
+      + min_size                  = 1
+      + name                      = (known after apply)
+      + name_prefix               = "apigee-runtime-"
+      + predicted_capacity        = (known after apply)
+      + protect_from_scale_in     = false
+      + service_linked_role_arn   = (known after apply)
+      + target_group_arns         = (known after apply)
+      + termination_policies      = []
+      + vpc_zone_identifier       = [
+          + "subnet-089751bc6ca566d39",
+          + "subnet-09c109e429aff633d",
+          + "subnet-0ad46255c2886e70a",
+        ]
+      + wait_for_capacity_timeout = "10m"
+      + warm_pool_size            = (known after apply)
+
+      + instance_refresh {
+          + strategy = "Rolling"
+
+          + preferences {
+              + min_healthy_percentage = 66
+              + skip_matching          = false
+            }
+        }
+
+      + launch_template {
+          + id      = (known after apply)
+          + name    = (known after apply)
+          + version = (known after apply)
+        }
+
+      + tag {
+          + key                 = "Name"
+          + propagate_at_launch = true
+          + value               = "apigee-runtime"
+        }
+      + tag {
+          + key                 = "k8s.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+      + tag {
+          + key                 = "kubernetes.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+
+      + timeouts {}
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_iam_instance_profile.this[0] will be created
+  + resource "aws_iam_instance_profile" "this" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "apigee-runtime-node-group-"
+      + path        = "/"
+      + role        = (known after apply)
+      + tags_all    = (known after apply)
+      + unique_id   = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                      + Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Self managed node group IAM role"
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "apigee-runtime-node-group-"
+      + path                  = "/"
+      + tags_all              = (known after apply)
+      + unique_id             = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["apigee-runtime"].aws_launch_template.this[0] will be created
+  + resource "aws_launch_template" "this" {
+      + arn                    = (known after apply)
+      + default_version        = (known after apply)
+      + description            = "Custom launch template for apigee-runtime self managed node group"
+      + id                     = (known after apply)
+      + image_id               = "ami-0b6f89f548c40aa48"
+      + instance_type          = "m6i.large"
+      + latest_version         = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "apigee-runtime-"
+      + tags_all               = (known after apply)
+      + update_default_version = true
+      + user_data              = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+      + vpc_security_group_ids = [
+          + "sg-049e6b12293b8b1d3",
+        ]
+
+      + iam_instance_profile {
+          + arn = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_protocol_ipv6          = (known after apply)
+          + http_put_response_hop_limit = 2
+          + http_tokens                 = "required"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + monitoring {
+          + enabled = true
+        }
+
+      + tag_specifications {
+          + resource_type = "instance"
+          + tags          = {
+              + "Name" = "apigee-runtime"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "network-interface"
+          + tags          = {
+              + "Name" = "apigee-runtime"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "volume"
+          + tags          = {
+              + "Name" = "apigee-runtime"
+            }
+        }
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_autoscaling_group.this[0] will be created
+  + resource "aws_autoscaling_group" "this" {
+      + arn                       = (known after apply)
+      + availability_zones        = (known after apply)
+      + default_cooldown          = (known after apply)
+      + desired_capacity          = 1
+      + force_delete              = false
+      + force_delete_warm_pool    = false
+      + health_check_grace_period = 300
+      + health_check_type         = (known after apply)
+      + id                        = (known after apply)
+      + load_balancers            = (known after apply)
+      + max_size                  = 3
+      + metrics_granularity       = "1Minute"
+      + min_size                  = 1
+      + name                      = (known after apply)
+      + name_prefix               = "aws-default-"
+      + predicted_capacity        = (known after apply)
+      + protect_from_scale_in     = false
+      + service_linked_role_arn   = (known after apply)
+      + target_group_arns         = (known after apply)
+      + termination_policies      = []
+      + vpc_zone_identifier       = [
+          + "subnet-089751bc6ca566d39",
+          + "subnet-09c109e429aff633d",
+          + "subnet-0ad46255c2886e70a",
+        ]
+      + wait_for_capacity_timeout = "10m"
+      + warm_pool_size            = (known after apply)
+
+      + instance_refresh {
+          + strategy = "Rolling"
+
+          + preferences {
+              + min_healthy_percentage = 66
+              + skip_matching          = false
+            }
+        }
+
+      + launch_template {
+          + id      = (known after apply)
+          + name    = (known after apply)
+          + version = (known after apply)
+        }
+
+      + tag {
+          + key                 = "Name"
+          + propagate_at_launch = true
+          + value               = "aws-default"
+        }
+      + tag {
+          + key                 = "k8s.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+      + tag {
+          + key                 = "kubernetes.io/cluster/cbnk-aws-v1"
+          + propagate_at_launch = true
+          + value               = "owned"
+        }
+
+      + timeouts {}
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_iam_instance_profile.this[0] will be created
+  + resource "aws_iam_instance_profile" "this" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "aws-default-node-group-"
+      + path        = "/"
+      + role        = (known after apply)
+      + tags_all    = (known after apply)
+      + unique_id   = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                      + Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Self managed node group IAM role"
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "aws-default-node-group-"
+      + path                  = "/"
+      + tags_all              = (known after apply)
+      + unique_id             = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = (known after apply)
+    }
+
+  # module.eks.module.self_managed_node_group["default"].aws_launch_template.this[0] will be created
+  + resource "aws_launch_template" "this" {
+      + arn                    = (known after apply)
+      + default_version        = (known after apply)
+      + description            = "Custom launch template for aws-default self managed node group"
+      + id                     = (known after apply)
+      + image_id               = "ami-0b6f89f548c40aa48"
+      + instance_type          = "m6i.large"
+      + latest_version         = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "default-"
+      + tags_all               = (known after apply)
+      + update_default_version = true
+      + user_data              = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+      + vpc_security_group_ids = [
+          + "sg-049e6b12293b8b1d3",
+        ]
+
+      + iam_instance_profile {
+          + arn = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_protocol_ipv6          = (known after apply)
+          + http_put_response_hop_limit = 2
+          + http_tokens                 = "required"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + monitoring {
+          + enabled = true
+        }
+
+      + tag_specifications {
+          + resource_type = "instance"
+          + tags          = {
+              + "Name" = "aws-default"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "network-interface"
+          + tags          = {
+              + "Name" = "aws-default"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "volume"
+          + tags          = {
+              + "Name" = "aws-default"
+            }
+        }
+    }
+
+Plan: 21 to add, 0 to change, 18 to destroy.
+
+Changes to Outputs:
+  ~ cluster_all               = {
+      ~ aws_auth_configmap_yaml                          = <<-EOT
+            apiVersion: v1
+            kind: ConfigMap
+            metadata:
+              name: aws-auth
+              namespace: kube-system
+            data:
+              mapRoles: |
+                - rolearn: arn:aws:iam::660387449292:role/apigee-data-eks-node-group-20231129234615297400000002
+                  username: system:node:{{EC2PrivateDNSName}}
+                  groups:
+                    - system:bootstrappers
+                    - system:nodes
+                - rolearn: arn:aws:iam::660387449292:role/apigee-runtime-eks-node-group-20231129234615297600000003
+                  username: system:node:{{EC2PrivateDNSName}}
+                  groups:
+                    - system:bootstrappers
+                    - system:nodes
+                - rolearn: arn:aws:iam::660387449292:role/default-eks-node-group-20231201214223356500000001
+                  username: system:node:{{EC2PrivateDNSName}}
+                  groups:
+                    - system:bootstrappers
+                    - system:nodes
+        EOT -> (known after apply)
+      ~ eks_managed_node_groups                          = {
+          - apigee-data    = {
+              - autoscaling_group_schedule_arns    = {}
+              - iam_role_arn                       = "arn:aws:iam::660387449292:role/apigee-data-eks-node-group-20231129234615297400000002"
+              - iam_role_name                      = "apigee-data-eks-node-group-20231129234615297400000002"
+              - iam_role_unique_id                 = "AROAZTQRIZHGDGB3FFHAX"
+              - launch_template_arn                = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-0aaa86865d5252ed2"
+              - launch_template_id                 = "lt-0aaa86865d5252ed2"
+              - launch_template_latest_version     = 1
+              - launch_template_name               = "apigee-data-20231129235549544400000017"
+              - node_group_arn                     = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/apigee-data-2023112923555022640000001d/54c60ec1-5255-a76c-f84a-9a6118395420"
+              - node_group_autoscaling_group_names = [
+                  - "eks-apigee-data-2023112923555022640000001d-54c60ec1-5255-a76c-f84a-9a6118395420",
+                ]
+              - node_group_id                      = "cbnk-aws-v1:apigee-data-2023112923555022640000001d"
+              - node_group_labels                  = {}
+              - node_group_resources               = [
+                  - {
+                      - autoscaling_groups              = [
+                          - {
+                              - name = "eks-apigee-data-2023112923555022640000001d-54c60ec1-5255-a76c-f84a-9a6118395420"
+                            },
+                        ]
+                      - remote_access_security_group_id = ""
+                    },
+                ]
+              - node_group_status                  = "ACTIVE"
+              - node_group_taints                  = []
+            }
+          - apigee-runtime = {
+              - autoscaling_group_schedule_arns    = {}
+              - iam_role_arn                       = "arn:aws:iam::660387449292:role/apigee-runtime-eks-node-group-20231129234615297600000003"
+              - iam_role_name                      = "apigee-runtime-eks-node-group-20231129234615297600000003"
+              - iam_role_unique_id                 = "AROAZTQRIZHGIZPPQILSR"
+              - launch_template_arn                = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-01319851e8a4afcb9"
+              - launch_template_id                 = "lt-01319851e8a4afcb9"
+              - launch_template_latest_version     = 1
+              - launch_template_name               = "apigee-runtime-20231129235549545400000019"
+              - node_group_arn                     = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/apigee-runtime-2023112923555022870000001f/86c60ec1-5260-f799-8768-2dcb58762f41"
+              - node_group_autoscaling_group_names = [
+                  - "eks-apigee-runtime-2023112923555022870000001f-86c60ec1-5260-f799-8768-2dcb58762f41",
+                ]
+              - node_group_id                      = "cbnk-aws-v1:apigee-runtime-2023112923555022870000001f"
+              - node_group_labels                  = {}
+              - node_group_resources               = [
+                  - {
+                      - autoscaling_groups              = [
+                          - {
+                              - name = "eks-apigee-runtime-2023112923555022870000001f-86c60ec1-5260-f799-8768-2dcb58762f41"
+                            },
+                        ]
+                      - remote_access_security_group_id = ""
+                    },
+                ]
+              - node_group_status                  = "ACTIVE"
+              - node_group_taints                  = []
+            }
+          - default        = {
+              - autoscaling_group_schedule_arns    = {}
+              - iam_role_arn                       = "arn:aws:iam::660387449292:role/default-eks-node-group-20231201214223356500000001"
+              - iam_role_name                      = "default-eks-node-group-20231201214223356500000001"
+              - iam_role_unique_id                 = "AROAZTQRIZHGFKVGGEV64"
+              - launch_template_arn                = "arn:aws:ec2:us-east-1:660387449292:launch-template/lt-045328e0150f29f00"
+              - launch_template_id                 = "lt-045328e0150f29f00"
+              - launch_template_latest_version     = 2
+              - launch_template_name               = "default-2023112923554954590000001b"
+              - node_group_arn                     = "arn:aws:eks:us-east-1:660387449292:nodegroup/cbnk-aws-v1/default-20231201214225810200000006/e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3"
+              - node_group_autoscaling_group_names = [
+                  - "eks-default-20231201214225810200000006-e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3",
+                ]
+              - node_group_id                      = "cbnk-aws-v1:default-20231201214225810200000006"
+              - node_group_labels                  = null
+              - node_group_resources               = [
+                  - {
+                      - autoscaling_groups              = [
+                          - {
+                              - name = "eks-default-20231201214225810200000006-e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3"
+                            },
+                        ]
+                      - remote_access_security_group_id = ""
+                    },
+                ]
+              - node_group_status                  = "ACTIVE"
+              - node_group_taints                  = []
+            }
+        }
+      ~ eks_managed_node_groups_autoscaling_group_names  = [
+          - "eks-apigee-data-2023112923555022640000001d-54c60ec1-5255-a76c-f84a-9a6118395420",
+          - "eks-apigee-runtime-2023112923555022870000001f-86c60ec1-5260-f799-8768-2dcb58762f41",
+          - "eks-default-20231201214225810200000006-e4c613aa-9d7d-8406-d99b-2f5fa4c06aa3",
+        ]
+      ~ self_managed_node_groups                         = {
+          + apigee-data    = {
+              + autoscaling_group_arn                       = (known after apply)
+              + autoscaling_group_availability_zones        = (known after apply)
+              + autoscaling_group_default_cooldown          = (known after apply)
+              + autoscaling_group_desired_capacity          = 1
+              + autoscaling_group_health_check_grace_period = 300
+              + autoscaling_group_health_check_type         = (known after apply)
+              + autoscaling_group_id                        = (known after apply)
+              + autoscaling_group_max_size                  = 3
+              + autoscaling_group_min_size                  = 1
+              + autoscaling_group_name                      = (known after apply)
+              + autoscaling_group_schedule_arns             = {}
+              + autoscaling_group_vpc_zone_identifier       = [
+                  + "subnet-089751bc6ca566d39",
+                  + "subnet-09c109e429aff633d",
+                  + "subnet-0ad46255c2886e70a",
+                ]
+              + iam_instance_profile_arn                    = (known after apply)
+              + iam_instance_profile_id                     = (known after apply)
+              + iam_instance_profile_unique                 = (known after apply)
+              + iam_role_arn                                = (known after apply)
+              + iam_role_name                               = (known after apply)
+              + iam_role_unique_id                          = (known after apply)
+              + image_id                                    = "ami-0b6f89f548c40aa48"
+              + launch_template_arn                         = (known after apply)
+              + launch_template_id                          = (known after apply)
+              + launch_template_latest_version              = (known after apply)
+              + launch_template_name                        = (known after apply)
+              + platform                                    = "linux"
+              + user_data                                   = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+            }
+          + apigee-runtime = {
+              + autoscaling_group_arn                       = (known after apply)
+              + autoscaling_group_availability_zones        = (known after apply)
+              + autoscaling_group_default_cooldown          = (known after apply)
+              + autoscaling_group_desired_capacity          = 1
+              + autoscaling_group_health_check_grace_period = 300
+              + autoscaling_group_health_check_type         = (known after apply)
+              + autoscaling_group_id                        = (known after apply)
+              + autoscaling_group_max_size                  = 3
+              + autoscaling_group_min_size                  = 1
+              + autoscaling_group_name                      = (known after apply)
+              + autoscaling_group_schedule_arns             = {}
+              + autoscaling_group_vpc_zone_identifier       = [
+                  + "subnet-089751bc6ca566d39",
+                  + "subnet-09c109e429aff633d",
+                  + "subnet-0ad46255c2886e70a",
+                ]
+              + iam_instance_profile_arn                    = (known after apply)
+              + iam_instance_profile_id                     = (known after apply)
+              + iam_instance_profile_unique                 = (known after apply)
+              + iam_role_arn                                = (known after apply)
+              + iam_role_name                               = (known after apply)
+              + iam_role_unique_id                          = (known after apply)
+              + image_id                                    = "ami-0b6f89f548c40aa48"
+              + launch_template_arn                         = (known after apply)
+              + launch_template_id                          = (known after apply)
+              + launch_template_latest_version              = (known after apply)
+              + launch_template_name                        = (known after apply)
+              + platform                                    = "linux"
+              + user_data                                   = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+            }
+          + default        = {
+              + autoscaling_group_arn                       = (known after apply)
+              + autoscaling_group_availability_zones        = (known after apply)
+              + autoscaling_group_default_cooldown          = (known after apply)
+              + autoscaling_group_desired_capacity          = 1
+              + autoscaling_group_health_check_grace_period = 300
+              + autoscaling_group_health_check_type         = (known after apply)
+              + autoscaling_group_id                        = (known after apply)
+              + autoscaling_group_max_size                  = 3
+              + autoscaling_group_min_size                  = 1
+              + autoscaling_group_name                      = (known after apply)
+              + autoscaling_group_schedule_arns             = {}
+              + autoscaling_group_vpc_zone_identifier       = [
+                  + "subnet-089751bc6ca566d39",
+                  + "subnet-09c109e429aff633d",
+                  + "subnet-0ad46255c2886e70a",
+                ]
+              + iam_instance_profile_arn                    = (known after apply)
+              + iam_instance_profile_id                     = (known after apply)
+              + iam_instance_profile_unique                 = (known after apply)
+              + iam_role_arn                                = (known after apply)
+              + iam_role_name                               = (known after apply)
+              + iam_role_unique_id                          = (known after apply)
+              + image_id                                    = "ami-0b6f89f548c40aa48"
+              + launch_template_arn                         = (known after apply)
+              + launch_template_id                          = (known after apply)
+              + launch_template_latest_version              = (known after apply)
+              + launch_template_name                        = (known after apply)
+              + platform                                    = "linux"
+              + user_data                                   = "IyEvYmluL2Jhc2gKc2V0IC1lCkI2NF9DTFVTVEVSX0NBPUxTMHRMUzFDUlVkSlRpQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENrMUpTVU12YWtORFFXVmhaMEYzU1VKQlowbENRVVJCVGtKbmEzRm9hMmxIT1hjd1FrRlJjMFpCUkVGV1RWSk5kMFZSV1VSV1VWRkVSWGR3Y21SWFNtd0tZMjAxYkdSSFZucE5RalJZUkZSSmVrMVVSWGxQVkVsNlRsUkZkMDR4YjFoRVZFMTZUVlJGZVU1cVNYcE9WRVYzVGpGdmQwWlVSVlJOUWtWSFFURlZSUXBCZUUxTFlUTldhVnBZU25WYVdGSnNZM3BEUTBGVFNYZEVVVmxLUzI5YVNXaDJZMDVCVVVWQ1FsRkJSR2RuUlZCQlJFTkRRVkZ2UTJkblJVSkJUVXh4Q2trd2NuRTVha04zUjBsMWVDdE1iRXRqZWtaT1NHWXZiRUpFVmpaNFlWY3ZPSFpJYWtsMGJrUTRTWFl6Ym1GblRFcHFiMFpqVURGYU1HRnBkamRhVjJzS2VrdHlPQzloY1dOeWFFbFBTRTh6TmpSS2IwRTVhM2xHVFZSWVZIZHNZbGxvUlZJNVFXaDJSR05RY1ZkMVNYVjVOalJ0VVVSaE1FTjRkRGRPTkdvMUt3cEtSVkpzU0dWUGFGSlpTeTl0ZVZCSWRXUmlhM0ZyVkZsblIzRkNTRXhVWVVSRWMyUjBTRE5LTmtkWmFYTkJLMHBKY1ZWc1lqVTBSR2d5V2xsaE9WbFpDbEk0U1VSc1dISk5XR2w1UlZJNGVXMXJTMDFCSzJGUVNGWjRjSE12SzNWNVYwaFlla1pMYXpaSVdtOTZlV1ptZEdoelZtaHRSWEpoWmtkcmVqSnBXallLVkcxTGQwcElWRWxtVHpsRFMxbHJZbGx3VWxkUmF6ZFdaMVpoSzNoU00waE9aVEpXVVM4MWFqWlVaRmhFWjJSU1owaG5NV1l3WTBrcmMyYzNabFpaZUFwUmNsWldObmc0Y1RaQ05qQk5WV2Q1WjNaclEwRjNSVUZCWVU1YVRVWmpkMFJuV1VSV1VqQlFRVkZJTDBKQlVVUkJaMHRyVFVFNFIwRXhWV1JGZDBWQ0NpOTNVVVpOUVUxQ1FXWTRkMGhSV1VSV1VqQlBRa0paUlVaQ05VaExja0V3ZVZoSGJFbFljV3QyVlRNemNUVlFVekpsV0hkTlFsVkhRVEZWWkVWUlVVOEtUVUY1UTBOdGRERlpiVlo1WW0xV01GcFlUWGRFVVZsS1MyOWFTV2gyWTA1QlVVVk1RbEZCUkdkblJVSkJSMDlyZGpSUU1rUTFXbkJNT1ZNME56aEdlZ3BOWm5Zd01XOHJNVFpOVUN0VGQzY3ZVa1V4WjNwbFltMXJjVXdyVkUxcE1rTTFPR1ZrVkdjeVZWbExNbEJWVWtGYWVYSXdiMDlHYzNSRGFuRXdWa3g2Q2tKT1EwSXlibmhVVVRsUWEyZEVaR2hxV25FeVppdE1SSHBIZFRGaVRtbDJUMnh6YURKRFdtaHVNR3hxY1VWM1N6Vm9WMGsyTm5keGJsUnllV3BWWkVJS1dVTmtUMDV6UkVWMllsbHhlR1pRZEZCRVExbHNOUzlEVFZCWmFVaG5iblZrVVhwQmQyTnNPWFJ6YzBZeWVFVTNOWEJZUTAxbWFUTjRkM1paT1VscWNncFhXVFZtTjJkaU5qWnZLMUI2ZDNkNU9HOVpUbWRHT1U5aFdEaEZiMFZqY1RKa2NtZGxURk5yTkZSd1ppOUNSbEZyUlZScGNHcFRNVXB0Y1dOc2JrNHhDamd5T1VOc2RrSjZhbTlDYlZRNE1UWjRibGhITUhodE9ITmxVRmhsUzBsM2VXTlZjV1UyV2sxcmJVNUhZbTVQYmk5MVVsSm9VM1ZxTTIxV1RDOXlZVlFLUzFoblBRb3RMUzB0TFVWT1JDQkRSVkpVU1VaSlEwRlVSUzB0TFMwdENnPT0KQVBJX1NFUlZFUl9VUkw9aHR0cHM6Ly8yNTkwMzE1Q0YyOURCNjg2MzZBQTNBQzc1QjdFMjg2My5ncjcudXMtZWFzdC0xLmVrcy5hbWF6b25hd3MuY29tCi9ldGMvZWtzL2Jvb3RzdHJhcC5zaCBjYm5rLWF3cy12MSAgLS1iNjQtY2x1c3Rlci1jYSAkQjY0X0NMVVNURVJfQ0EgLS1hcGlzZXJ2ZXItZW5kcG9pbnQgJEFQSV9TRVJWRVJfVVJMCg=="
+            }
+        }
+      ~ self_managed_node_groups_autoscaling_group_names = [] -> (known after apply)
+        # (28 unchanged attributes hidden)
+    }
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: planfile
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "planfile"

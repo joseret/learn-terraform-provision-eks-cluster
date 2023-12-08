@@ -28,7 +28,17 @@ module "project_services_gke" {
 
   activate_apis = [
     "secretmanager.googleapis.com",
-    "cloudbuild.googleapis.com"
+    "cloudbuild.googleapis.com",
+    "compute.googleapis.com",
+    "cloudresourcemanager.googleapis.com",
+    "dns.googleapis.com",
+    "iamcredentials.googleapis.com",
+    "iam.googleapis.com",
+    "serviceusage.googleapis.com",
+    "cloudapis.googleapis.com",
+    "servicemanagement.googleapis.com",
+    "storage-api.googleapis.com",
+    "storage-component.googleapis.com",
     # "anthos.googleapis.com",
     # "anthosaudit.googleapis.com",
     # "anthosgke.googleapis.com",
@@ -76,5 +86,25 @@ module "deployer_aws_gsa" {
   project_roles = [
     "${var.project_id}=>roles/secretmanager.secretAccessor",
     "${var.project_id}=>roles/editor",
+  ]
+}
+
+
+module "deployer_ose_gsa" {
+  source     = "terraform-google-modules/service-accounts/google"
+  version    = "~> 4.2"
+  project_id = var.project_id
+  prefix     = "gsa"
+  names      = ["deployer-ose"]
+  project_roles = [
+    "${var.project_id}=>roles/compute.admin",
+    "${var.project_id}=>roles/iam.securityAdmin",
+    "${var.project_id}=>roles/iam.serviceAccountAdmin",
+    "${var.project_id}=>roles/iam.serviceAccountKeyAdmin",
+    "${var.project_id}=>roles/iam.serviceAccountUser",
+    "${var.project_id}=>roles/storage.admin",
+    "${var.project_id}=>roles/dns.admin",
+    "${var.project_id}=>roles/compute.loadBalancerAdmin",
+    "${var.project_id}=>roles/iam.roleViewer",
   ]
 }

@@ -20,3 +20,8 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = module.eks.cluster_name
 }
+
+output "cluster_all" {
+  description = "Kubernetes Cluster all"
+  value       = module.eks
+}

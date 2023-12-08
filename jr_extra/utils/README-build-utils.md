@@ -10,3 +10,7 @@ gcloud builds submit --config=jr_extra/bcl1/cloudbuild.yaml . --substitutions="_
 ```
 gcloud builds submit --config=/Users/joseret/g/pso/mc1/jr-learn-terraform-provision-eks-cluster/jr_extra/helm1/cloudbuild.yaml /Users/joseret/g/pso/mc1/jr-learn-terraform-provision-eks-cluster/jr_extra/helm1 --substitutions="_APPLY_AFTER_PLAN=No,_MANUAL_BRANCH=?" --project hybrid-test-001
 ```
+
+```
+export KUBECONFIG=$HOME/aws1
+```

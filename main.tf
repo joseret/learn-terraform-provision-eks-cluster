@@ -66,6 +66,10 @@ module "eks" {
 
   }
 
+  self_managed_node_group_defaults = {
+    ami_type = "AL2_x86_64"
+  }
+
   eks_managed_node_groups = {
     default = {
       name = "aws-default"
@@ -83,9 +87,12 @@ module "eks" {
 
       instance_types = ["m7i-flex.xlarge"]
 
-      min_size     = 1
+      min_size     = 3
       max_size     = 3
-      desired_size = 1
+      desired_size = 3
+      labels = {
+        "nodegroup" = "apigee-data"
+      }
     }
 
     apigee-runtime = {
@@ -93,9 +100,12 @@ module "eks" {
 
       instance_types = ["m7i-flex.xlarge"]
 
-      min_size     = 1
+      min_size     = 3
       max_size     = 3
-      desired_size = 1
+      desired_size = 3
+      labels = {
+        "nodegroup" = "apigee-runtime"
+      }
     }
   }
 }
