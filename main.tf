@@ -55,7 +55,8 @@ module "eks" {
   version = "19.15.3"
 
   cluster_name    = local.cluster_name
-  cluster_version = "1.24" // "1.27"
+  cluster_version = "1.25" // "1.27"
+
 
   vpc_id                         = module.vpc.vpc_id
   subnet_ids                     = module.vpc.private_subnets
@@ -63,7 +64,7 @@ module "eks" {
 
   eks_managed_node_group_defaults = {
     ami_type = "AL2_x86_64"
-
+    key_name = "joseret-node"
   }
 
   self_managed_node_group_defaults = {
