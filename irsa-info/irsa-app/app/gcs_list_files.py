@@ -18,9 +18,11 @@ import logging
 import sys
 import time
 
+
 # [START storage_list_files]
 from google.cloud import storage
 
+logging.warning('Test Log')
 
 def list_blobs(bucket_name):
     """Lists all the blobs in the bucket."""
@@ -41,10 +43,10 @@ def list_blobs(bucket_name):
 
 if __name__ == "__main__":
   while True:
-    print("listing")
+    logging.warning("listing..")
     try:
       list_blobs(bucket_name=sys.argv[1])
     except:
       logging.exception('Got exception on list_blobs')
-    print("sleeping")
+    logging("sleeping...")
     time.sleep(10)
