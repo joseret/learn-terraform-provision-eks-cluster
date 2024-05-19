@@ -35,9 +35,10 @@ https://stackoverflow.com/questions/64232268/storing-images-in-aws-ecr-using-nam
 ## Test App
 ```
 aws ecr get-login-password --region us-east-2 | podman login --username AWS --password-stdin 660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1
 ```
 
 ```
-podman build --tag  660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.1 .
-podman push 660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.1
+docker build --tag  660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.2 .
+docker push 660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.2
 ```

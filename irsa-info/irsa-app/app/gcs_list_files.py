@@ -15,6 +15,7 @@
 # limitations under the License.
 
 import sys
+import time
 
 # [START storage_list_files]
 from google.cloud import storage
@@ -38,4 +39,6 @@ def list_blobs(bucket_name):
 
 
 if __name__ == "__main__":
-    list_blobs(bucket_name=sys.argv[1])
+    while True:
+      list_blobs(bucket_name=sys.argv[1])
+      time.sleep(10)
