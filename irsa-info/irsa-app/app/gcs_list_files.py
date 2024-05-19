@@ -40,5 +40,7 @@ def list_blobs(bucket_name):
 
 if __name__ == "__main__":
     while True:
+      print("listing")
       list_blobs(bucket_name=sys.argv[1])
+      print("sleeping")
       time.sleep(10)
