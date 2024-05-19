@@ -3,6 +3,15 @@ kind: Namespace
 metadata:
   name: app-a
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: app-a
+  namespace: app-a
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::660387449292:role/jr-app-a-ksa"
+automountServiceAccountToken: false
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,6 +27,7 @@ spec:
       labels:
         app: hello-app
     spec:
+      serviceAccountName: app-a
       containers:
         - name: hello
           image: "660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.3"
@@ -25,5 +35,24 @@ spec:
           command: ["python3"]
           args: ["gcs_list_files.py", "jr-network-infra-1-4978-info1"]
           env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /app-secret/cm-wijson.json
+            - name: "GOOGLE_CLOUD_PROJECT"
+              value: "joseret-temp-5683"
+            - name: "AWS_DEFAULT_REGION"
+              value: "us-east-2"
             - name: "PORT"
               value: "8080"
+          # config map mount
+          volumeMounts:
+            - name: app-config
+              mountPath: /app-secret
+              readOnly: true
+
+      volumes:
+        - name: app-config
+          configMap:
+            name: cm-mount
+            items:
+              - key: wijson
+                path: cm-wijson.json

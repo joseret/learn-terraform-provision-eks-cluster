@@ -5,9 +5,14 @@ FROM ubuntu:latest
 # Python and Pip
 RUN apt update && apt install -y \
   python3 \
-  python3-pip
+  python3-pip \
+  python3-setuptools \
+  groff \
+  less \
+  && pip3 install --upgrade pip \
+  && apt-get clean
 
-
+RUN pip3 --no-cache-dir install --upgrade awscli
 COPY . /app
 WORKDIR /app
 RUN pip3 install -r requirements.txt
