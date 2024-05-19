@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import logging
 import sys
 import time
 
@@ -41,6 +42,12 @@ def list_blobs(bucket_name):
 if __name__ == "__main__":
     while True:
       print("listing")
-      list_blobs(bucket_name=sys.argv[1])
-      print("sleeping")
-      time.sleep(10)
+
+while True:
+  print("listing")
+  try:
+    list_blobs(bucket_name=sys.argv[1])
+  except:
+    logging.exception('Got exception on list_blobs')
+  print("sleeping")
+  time.sleep(10)
