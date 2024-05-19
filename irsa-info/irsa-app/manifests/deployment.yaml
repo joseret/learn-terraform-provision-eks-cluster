@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: "660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.2"
+          image: "660387449292.dkr.ecr.us-east-2.amazonaws.com/joseret-repo1:v0.0.3"
           command: ["python3"]
           args: ["gcs_list_files.py", "jr-network-infra-1-4978-info1"]
           env:
