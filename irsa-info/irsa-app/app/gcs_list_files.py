@@ -43,10 +43,10 @@ def list_blobs(bucket_name):
 
 if __name__ == "__main__":
   while True:
-    logging.warning("listing..")
+    logging.warning("listing...\n\n\n")
     try:
       list_blobs(bucket_name=sys.argv[1])
     except:
       logging.exception('Got exception on list_blobs')
-    logging("sleeping...")
+    logging.warning("sleeping...\n\n\n")
     time.sleep(10)
