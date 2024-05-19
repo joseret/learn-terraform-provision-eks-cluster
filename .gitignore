@@ -26,3 +26,4 @@ override.tf.json
 .terraformrc
 terraform.rc
 **/planfile
+irsa-info/irsa-app/app/venv/**
