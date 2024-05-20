@@ -90,7 +90,7 @@ def get_session_token():
   # read file into variable python 
   sts = session.client("sts")
   response = sts.assume_role_with_web_identity(
-      DurationSeconds=300,
+      DurationSeconds=900,
       # Policy='{"Version":"2012-10-17","Statement":[{"Sid":"Stmt1","Effect":"Allow","Action":"s3:ListAllMyBuckets","Resource":"*"}]}',
       ProviderId='www.amazon.com',
       # get
