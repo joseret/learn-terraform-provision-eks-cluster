@@ -115,10 +115,9 @@ def get_session_token():
   try:
     with open(os.environ['AWS_WEB_IDENTITY_TOKEN_FILE'], "r") as file:
       file_contents = file.read()
-      logging.warning("token file:",file_contents)
-  
+      # logging.warning("token file:",file_contents)
   except FileNotFoundError:
-    logging.warning("token file:","File not found")
+    logging.error("ERROR-token file:","File not found")
   
   session = boto3.Session()
   # read file into variable python 
@@ -132,8 +131,8 @@ def get_session_token():
       RoleSessionName=os.environ['HOSTNAME'],
       WebIdentityToken=file_contents
   )
-  print("print-response:",response)
-  logging.warning("response:",type(response),response)
+  # print("print-response:",response)
+  # logging.warning("response:",type(response),response)
   return response
 
 
@@ -145,6 +144,6 @@ if __name__ == "__main__":
       # get_session_token()
       list_blobs(bucket_name=sys.argv[1])
     except:
-      logging.exception('Got exception on list_blobs')
+      logging.exception('ERROR:Got exception on list_blobs')
     logging.warning("sleeping...\n\n\n")
     time.sleep(10)

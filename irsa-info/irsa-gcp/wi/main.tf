@@ -27,6 +27,7 @@ resource "google_iam_workload_identity_pool_provider" "aws_irsa_1a" {
   attribute_mapping = {
     "google.subject"        = "assertion.arn"
     "attribute.aws_account" = "assertion.account"
+    "attribute.aws_role"    = "assertion.arn.extract('assumed-role/{role}/')"
     # attribute.pod=assertion['kubernetes.io']['pod']['name']
   }
   aws {
