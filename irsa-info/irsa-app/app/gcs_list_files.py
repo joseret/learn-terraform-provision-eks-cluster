@@ -142,7 +142,7 @@ if __name__ == "__main__":
   while True:
     logging.warning("listing...\n\n\n")
     try:
-      get_session_token()
+      # get_session_token()
       list_blobs(bucket_name=sys.argv[1])
     except:
       logging.exception('Got exception on list_blobs')
