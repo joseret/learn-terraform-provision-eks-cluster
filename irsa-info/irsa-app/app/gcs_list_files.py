@@ -98,7 +98,8 @@ def get_session_token():
       RoleSessionName=os.environ['HOSTNAME'],
       WebIdentityToken=file_contents
   )
-  logging.warning("response:",response)
+  print("print-response:",response)
+  logging.warning("response:",type(response),response)
   return response
 
 
