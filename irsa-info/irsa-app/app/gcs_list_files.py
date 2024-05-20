@@ -107,7 +107,7 @@ AUDIENCE= "//iam.googleapis.com/projects/496684231732/locations/global/workloadI
 credentials = aws.Credentials(
     AUDIENCE, # Set GCP Audience.
     "urn:ietf:params:aws:token-type:aws4_request", # Set AWS subject token type.
-    aws_security_token_supplier=supplier, # Set supplier.
+    aws_security_credentials_supplier=supplier, # Set supplier.
     # scopes=SCOPES # Set desired scopes.
 )
 
