@@ -86,7 +86,7 @@ def get_session_token():
   except FileNotFoundError:
     logging.warning("token file:","File not found")
   
-  session = boto3.Session(profile_name=os.environ['HOSTNAME'])
+  session = boto3.Session()
   # read file into variable python 
   sts = session.client("sts")
   response = sts.assume_role_with_web_identity(
