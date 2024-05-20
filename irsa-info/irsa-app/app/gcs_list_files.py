@@ -14,10 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 import logging
 import sys
 import time
+import os
 
+import boto3
 
 # [START storage_list_files]
 from google.cloud import storage
@@ -74,19 +77,37 @@ def list_blobs(bucket_name):
 
 #  eval $(aws sts assume-role-with-web-identity --role-arn $AWS_ROLE_ARN --role-session-name ${session_name} --web-identity-token $(cat $AWS_WEB_IDENTITY_TOKEN_FILE) | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
 
-# response = client.assume_role_with_web_identity(
-#     DurationSeconds=3600,
-#     # Policy='{"Version":"2012-10-17","Statement":[{"Sid":"Stmt1","Effect":"Allow","Action":"s3:ListAllMyBuckets","Resource":"*"}]}',
-#     ProviderId='www.amazon.com',
-#     RoleArn='arn:aws:iam::123456789012:role/FederatedWebIdentityRole',
-#     RoleSessionName='app1',
-#     WebIdentityToken='Atza%7CIQEBLjAsAhRFiXuWpUXuRvQ9PZL3GMFcYevydwIUFAHZwXZXXXXXXXXJnrulxKDHwy87oGKPznh0D6bEQZTSCzyoCtL_8S07pLpr0zMbn6w1lfVZKNTBdDansFBmtGnIsIapjI6xKR02Yc_2bQ8LZbUXSGm6Ry6_BG7PrtLZtj_dfCTj92xNGed-CrKqjG7nPBjNIL016GGvuS5gSvPRUxWES3VYfm1wl7WTI7jn-Pcb6M-buCgHhFOzTQxod27L9CqnOLio7N3gZAGpsp6n1-AJBOCJckcyXe2c6uD0srOJeZlKUm2eTDVMf8IehDVI0r1QOnTV6KzzAI3OY87Vd_cVMQ',
-# )
+def get_session_token():
+  try:
+    with open(os.environ['AWS_WEB_IDENTITY_TOKEN_FILE'], "r") as file:
+      file_contents = file.read()
+      logging.warning("token file:",file_contents)
+  
+  except FileNotFoundError:
+    logging.warning("token file:","File not found")
+  
+  session = boto3.Session(profile_name=os.environ['HOSTNAME'])
+  # read file into variable python 
+  sts = session.client("sts")
+  response = sts.assume_role_with_web_identity(
+      DurationSeconds=300,
+      # Policy='{"Version":"2012-10-17","Statement":[{"Sid":"Stmt1","Effect":"Allow","Action":"s3:ListAllMyBuckets","Resource":"*"}]}',
+      ProviderId='www.amazon.com',
+      # get
+      RoleArn=os.environ['AWS_ROLE_ARN'],
+      RoleSessionName=os.environ['HOSTNAME'],
+      WebIdentityToken=file_contents
+  )
+  logging.warning("response:",response)
+  return response
+
+
 
 if __name__ == "__main__":
   while True:
     logging.warning("listing...\n\n\n")
     try:
+      get_session_token()
       list_blobs(bucket_name=sys.argv[1])
     except:
       logging.exception('Got exception on list_blobs')
