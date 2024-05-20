@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::AWS-ACCOUNT:oidc-provider/oidc.eks.REGION.amazonaws.com/id/EKS_CLUSTER_1_OIDC-PROVIDER_ID"
+      },
+      "Action": "sts:AssumeRoleWithWebIdentity",
+      "Condition": {
+        "StringEquals": {
+          "oidc.eks.REGION.amazonaws.com/id/EKS_CLUSTER_1_OIDC_PROVIDER_ID:sub": "system:serviceaccount: kube-system:LOAD_BALANCER_CONTROLLER_SERVICE_ACCOUNT",
+          "oidc.eks.REGION.amazonaws.com/id/EKS_CLUSTER_1_OIDC_PROVIDER_ID:aud": "sts.amazonaws.com"
+        }
+      }
+    }
+  ]
+}

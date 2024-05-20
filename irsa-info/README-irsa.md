@@ -87,3 +87,7 @@ aws iam create-role --role-name=jr-app-a-ksa \
     --assume-role-policy-document file://trust-policy.json
 
 "python3" "gcs_list_files.py", "joseret-temp-5683"
+
+aws iam get-role --role-name jr-app-a-ksa  --query Role.AssumeRolePolicyDocument
+
+aws sts assume-role-with-web-identity --role-arn $AWS_ROLE_ARN --role-session-name x123x --web-identity-token $(cat $AWS_WEB_IDENTITY_TOKEN_FILE) --debug
