@@ -118,11 +118,11 @@ def get_session_token():
       # logging.warning("token file:",file_contents)
   except FileNotFoundError:
     logging.error("ERROR-token file:","File not found")
-  
-  session = boto3.Session()
-  # read file into variable python 
-  sts = session.client("sts")
-  response = sts.assume_role_with_web_identity(
+  try:
+    session = boto3.Session()
+    # read file into variable python 
+    sts = session.client("sts")
+    response = sts.assume_role_with_web_identity(
       DurationSeconds=900,
       # Policy='{"Version":"2012-10-17","Statement":[{"Sid":"Stmt1","Effect":"Allow","Action":"s3:ListAllMyBuckets","Resource":"*"}]}',
       # ProviderId='www.amazon.com',
@@ -130,7 +130,9 @@ def get_session_token():
       RoleArn=os.environ['AWS_ROLE_ARN'],
       RoleSessionName=os.environ['HOSTNAME'],
       WebIdentityToken=file_contents
-  )
+    )
+  except Exception as e:
+    logging.error("ERROR-getting response:",e)    
   # print("print-response:",response)
   # logging.warning("response:",type(response),response)
   return response
@@ -143,7 +145,7 @@ if __name__ == "__main__":
     try:
       # get_session_token()
       list_blobs(bucket_name=sys.argv[1])
-    except:
-      logging.exception('ERROR:Got exception on list_blobs')
+    except Exception as e:
+      logging.error('ERROR:Got exception on list_blobs',e)
     logging.warning("sleeping...\n\n\n")
     time.sleep(10)
