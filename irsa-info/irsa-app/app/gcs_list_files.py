@@ -92,7 +92,7 @@ def get_session_token():
   response = sts.assume_role_with_web_identity(
       DurationSeconds=900,
       # Policy='{"Version":"2012-10-17","Statement":[{"Sid":"Stmt1","Effect":"Allow","Action":"s3:ListAllMyBuckets","Resource":"*"}]}',
-      ProviderId='www.amazon.com',
+      # ProviderId='www.amazon.com',
       # get
       RoleArn=os.environ['AWS_ROLE_ARN'],
       RoleSessionName=os.environ['HOSTNAME'],
