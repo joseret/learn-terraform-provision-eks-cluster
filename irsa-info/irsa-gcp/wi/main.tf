@@ -35,6 +35,7 @@ resource "google_iam_workload_identity_pool_provider" "aws_irsa_1a" {
   }
 }
 
+# principalSet://iam.googleapis.com/projects/496684231732/locations/global/workloadIdentityPools/aws-brcm-irsa-pool-v1/attribute.aws_role/jr-app-a-ksa
 resource "google_iam_workload_identity_pool_provider" "aws_irsa_5" {
   project                            = var.project_id
   workload_identity_pool_id          = google_iam_workload_identity_pool.aws_irsa_1.workload_identity_pool_id

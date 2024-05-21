@@ -27,3 +27,4 @@ override.tf.json
 terraform.rc
 **/planfile
 irsa-info/irsa-app/app/venv/**
+**/.DS_Store

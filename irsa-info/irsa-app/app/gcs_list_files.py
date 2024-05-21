@@ -43,44 +43,11 @@ def list_blobs(bucket_name):
 
 # [END storage_list_files]
 
-# class CustomAwsSupplier(AwsSecurityCredentialsSupplier):
-#   def get_aws_security_credentials(self, context, request):
-#     audience = context.getAudience()
-#     try:
-#       return custom_retrieve_aws_security_credentials(audience)
-#     except:
-#       raise IOError()
-  
-  
-#   def get_aws_region(self, context, request):
-#     try:
-#       return custom_retrieve_aws_region()
-#     except:
-#       raise IOError()
-
-#   def custom_retrieve_aws_security_credentials(audience) {
-#     // Retrieve Aws security credentials for the requested audience.
-
-#   }
-
-#   def custom_retrieve_aws_region() {
-#     // Retrieve current AWS region.
-#     return "us-east-2"
-#   }  
-
-# awsSupplier = CustomAwsSupplier();
-# credentials = AwsCredentials.newBuilder()
-#   .setSubjectTokenType(SubjectTokenTypes.AWS4) // Sets the subject token type.
-#   .setAudience(...) // Sets the GCP audience.
-#   .setAwsSecurityCredentialsSupplier(supplier) // Sets the supplier.
-#   .build();
-
 #  eval $(aws sts assume-role-with-web-identity --role-arn $AWS_ROLE_ARN --role-session-name ${session_name} --web-identity-token $(cat $AWS_WEB_IDENTITY_TOKEN_FILE) | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
 from google.auth import aws
 from google.auth import exceptions
 
 class CustomAwsSecurityCredentialsSupplier(aws.AwsSecurityCredentialsSupplier):
-
     def get_aws_security_credentials(self, context, request):
         audience = context.audience
         try:
