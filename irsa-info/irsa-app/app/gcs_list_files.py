@@ -27,11 +27,12 @@ from google.cloud import storage
 
 logging.warning('Test Log')
 
+storage_client = None
 def list_blobs(bucket_name):
     """Lists all the blobs in the bucket."""
     # bucket_name = "your-bucket-name"
 
-    storage_client = storage.Client(credentials=credentials)
+
 
     # Note: Client.list_blobs requires at least package version 1.17.0.
     blobs = storage_client.list_blobs(bucket_name)
@@ -107,6 +108,7 @@ def get_session_token():
 
 
 if __name__ == "__main__":
+  storage_client = storage.Client(credentials=credentials)
   while True:
     logging.warning("listing...\n\n\n")
     try:
